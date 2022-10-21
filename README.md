@@ -1,6 +1,9 @@
 # AngularRojects
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+### Project list
+- task list CRUD
+- task list CRUD LocalStorage
+- movies API
 
 ## Development server
 

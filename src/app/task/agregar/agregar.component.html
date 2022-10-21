@@ -1,0 +1,23 @@
+<form (ngSubmit)="addOrUpdateTask()">
+    <div class="mb-1">
+        <label for="taskNameIn" class="form-label">Task Name</label>
+        <input type="text" 
+        class="form-control" 
+        id="taskNameIn" 
+        name="taskName" 
+        placeholder="task name" 
+        [(ngModel)]="task.taskName">
+    </div>
+    <div class="mb-1">
+        <label for="taskNameIn" class="form-label">Priority</label>
+        <select class="form-select" aria-label="Select priority" name="priority" [(ngModel)]="task.priority">
+            
+            <option *ngFor="let item of priorityList" [ngValue]="item">{{item}}</option>
+          </select>
+    </div>
+    <div>
+        <button type="submit" class="btn btn-primary">Add</button>
+        <button type="button" class="btn btn-warning" (click)="update(task)">actualizar</button>
+    </div>
+</form>
+
