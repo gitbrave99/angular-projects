@@ -1,0 +1,15 @@
+<form (ngSubmit)="searchMovie()">
+  <div class="input-group has-validation">
+    <span class="input-group-text"><i class="bi bi-search"></i></span>
+    <div class="form-floating is-invalid">
+      <input type="text" class="form-control" 
+      name="titulo"
+      [(ngModel)]="titulo"
+      id="floatingInputGroup2"
+      placeholder="Titanic" required>
+      <label for="floatingInputGroup2">Movie Name</label>
+    </div>
+  </div>
+</form>
+
+
