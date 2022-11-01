@@ -1,17 +1,16 @@
 <form (ngSubmit)="addOrUpdateTask()">
     <div class="mb-1">
         <label for="taskNameIn" class="form-label">Task Name</label>
-        <input type="text" 
-        class="form-control" 
-        id="taskNameIn" 
-        name="taskName" 
-        placeholder="task name" 
+        <input type="text"
+        class="form-control"
+        id="taskNameIn"
+        name="taskName"
+        placeholder="task name"
         [(ngModel)]="task.taskName">
     </div>
     <div class="mb-1">
         <label for="taskNameIn" class="form-label">Priority</label>
         <select class="form-select" aria-label="Select priority" name="priority" [(ngModel)]="task.priority">
-            
             <option *ngFor="let item of priorityList" [ngValue]="item">{{item}}</option>
           </select>
     </div>

@@ -11,9 +11,9 @@ export class SearchBarComponent {
   titulo:string=""
 
   searchMovie(){
+    console.log(this.titulo);
+
       this.movieService.getPopularMovies(this.titulo);
-    
-    
   }
 
 }

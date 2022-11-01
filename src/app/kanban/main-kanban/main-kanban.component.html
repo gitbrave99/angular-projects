@@ -1,0 +1,78 @@
+<div class="container mt-3">
+  <div class="row justify-content-center">
+    <div class="col col-md-6">
+      <div class="card border-primary shadow-lg">
+        <div class="card-header">
+          <h5 class="text-center">Create Task</h5>
+        </div>
+        <form (ngSubmit)="addTaskKanBan()">
+          <div class="m-2">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="inTaskName" placeholder="Create API" name="taskName"
+                [(ngModel)]="ntask.title"
+                required="true">
+              <label for="inTaskName" class="text-muted">TaskName</label>
+            </div>
+          </div>
+          <div class="m-3">
+            <div class="form-floating">
+              <textarea class="form-control" placeholder="Leave a comment here" id="floatinginTaskDescriptionTextarea2"
+                style="height: 70px" name="description" [(ngModel)]="ntask.description" required="true">
+              </textarea>
+              <label for="inTaskDescription" class="text-muted">Description</label>
+            </div>
+          </div>
+          <div class="m-3">
+            <div class="form-floating">
+              <select class="form-select" id="inPriority" aria-label="select for priority" name="priority"
+                [(ngModel)]="ntask.priority" required="true">
+                <option *ngFor="let item of priorityLevel" [ngValue]="item">{{item}}</option>
+              </select>
+              <label for="inPriority">Priority</label>
+            </div>
+          </div>
+          <div class="m-3">
+            <div class="form-floating">
+              <select class="form-select" id="inStatus" aria-label="select for status" name="status"
+                [(ngModel)]="ntask.status" required="true">
+                <option *ngFor="let item of statusLevel" [ngValue]="item">{{item}}</option>
+              </select>
+              <label for="inStatus">Status</label>
+            </div>
+          </div>
+          <div class="m-3 text-center">
+            <button type="submit" class="btn btn-primary">Add</button>
+          
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5 ">
+  <div class="border-secondary shadow-lg ">
+    <div class="row  m-2">
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+        <!-- TODO LIST -->
+        <app-to-do></app-to-do>
+        <!-- END TODO LIST -->
+      </div>
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+        <!-- IN-PROGRESS LIST -->
+        <app-in-progress></app-in-progress>
+        <!-- END IN-PROGRESS LIST -->
+      </div>
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+        <!-- COMPLETED LIST -->
+        <app-completed></app-completed>
+        <!-- END COMPLETED LIST -->
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<br><br><br><br>

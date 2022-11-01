@@ -1,0 +1,11 @@
+<div class="card">
+  <div class="card-header">
+    <h4 class="text-center">To Do</h4>
+  </div>
+  <div class="toast-container position-static">
+        <app-task *ngFor="let item of listToDo"
+        [task]="item"
+        (onClickRightChange)="changeTodoInProgress($event)">
+        </app-task>
+  </div>
+</div>

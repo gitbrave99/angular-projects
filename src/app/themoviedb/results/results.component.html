@@ -11,7 +11,7 @@
   </div>
 </div>
 <div class="row justify-content-md-center g-2">
-  <!-- <div class="card col-md-4" *ngFor="let movie of listMovies">
+  <div class="card col-md-4" *ngFor="let movie of listMovies">
     <img [src]="('https://image.tmdb.org/t/p/w500/'+movie.backdrop_path)" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">{{movie.title}}</h5>
@@ -20,21 +20,7 @@
     <div class="card-footer">
       <small class="text-muted">{{movie.release_date}}</small>
     </div>
-  </div> -->
-</div>
-
-
-<div class="row">
-  <div class="col-md-6 offset-md-3">
-      <ul class="meal-list db">
-        <li *ngFor="let movie of listMovies | paginate: { id: 'server', itemsPerPage: 3, currentPage: page, totalItems: totalRecords }">
-            {{ movie.title }}
-        </li>
-      </ul>
-
-      <div class="has-text-centered">
-        <pagination-controls id="listing_pagination"  (pageChange)="page = $event"></pagination-controls>
-    </div>
-   
   </div>
 </div>
+
+

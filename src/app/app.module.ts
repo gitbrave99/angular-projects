@@ -5,11 +5,11 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { TaskModule } from './task/task.module';
 import { ThemoviedbModule } from './themoviedb/themoviedb.module';
-
+import { KanbanModule } from './kanban/kanban.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -17,6 +17,7 @@ import { ThemoviedbModule } from './themoviedb/themoviedb.module';
     ThemoviedbModule,
     SharedModule,
     TaskModule,
+    KanbanModule
   ],
   providers: [],
   bootstrap: [AppComponent]
