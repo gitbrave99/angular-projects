@@ -1,20 +1,20 @@
 <div class="container mt-3">
   <div class="row justify-content-center">
     <div class="col col-md-6">
-      <div class="card border-primary shadow-lg">
+      <div class="card border-secondary shadow-lg">
         <div class="card-header">
           <h5 class="text-center">Create Task</h5>
         </div>
         <form (ngSubmit)="addTaskKanBan()">
-          <div class="m-2">
-            <div class="form-floating mb-3">
+          <div class="mx-2 my-1">
+            <div class="form-floating">
               <input type="text" class="form-control" id="inTaskName" placeholder="create an API..." name="taskName"
                 [(ngModel)]="ntask.title"
                 required="true">
               <label for="inTaskName" class="text-muted">TaskName</label>
             </div>
           </div>
-          <div class="m-3">
+          <div class="mx-2 my-1">
             <div class="form-floating">
               <textarea class="form-control" placeholder="My description..." id="inTaskDescription"
                 style="height: 70px" name="description" [(ngModel)]="ntask.description" required="true">
@@ -22,7 +22,7 @@
               <label for="inTaskDescription" class="text-muted">Description</label>
             </div>
           </div>
-          <div class="m-3">
+          <div class="mx-2 my-1">
             <div class="form-floating">
               <select class="form-select" id="inPriority" aria-label="select for priority" name="priority"
                 [(ngModel)]="ntask.priority" required="true">
@@ -31,7 +31,7 @@
               <label for="inPriority">Priority</label>
             </div>
           </div>
-          <div class="m-3">
+          <div class="mx-2 my-1">
             <div class="form-floating">
               <select class="form-select" id="inStatus" aria-label="select for status" name="status"
                 [(ngModel)]="ntask.status" required="true">
@@ -41,7 +41,7 @@
             </div>
           </div>
           <div class="m-3 text-center">
-            <button type="submit" class="btn btn-primary">Add</button>
+            <button type="submit" class="btn btn-secondary">Add</button>
 
           </div>
         </form>
