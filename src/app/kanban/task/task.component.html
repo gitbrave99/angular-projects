@@ -1,15 +1,20 @@
 <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-header">
-    <button class="btn btn-success" [class]="getColorPriority(task.priority)"></button>&nbsp;
+    <button class="btn " [class]="getColorPriority(task.priority)"></button>&nbsp;
     <strong class="me-auto">{{task.priority}}</strong>
 
     <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
       <button type="button" class="btn btn-outline-dark" (click)="moveLeftTask()">
         <i class="bi bi-arrow-left"></i>
       </button>
-      <button type="button" class="btn btn-outline-dark">
+      <!-- <button type="button" class="btn btn-outline-dark" (click)="deleteTask()">
         <i class="bi bi-trash"></i>
-      </button>
+      </button> -->
+      <app-delete-task
+      [task]="task"
+      (onClickDeleteChange)="deleteTask()">
+      </app-delete-task>
+
       <button type="button" class="btn btn-outline-dark" (click)="moveRightTask()">
         <i class="bi bi-arrow-right"></i>
       </button>

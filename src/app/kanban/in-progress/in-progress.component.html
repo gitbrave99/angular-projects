@@ -1,15 +1,17 @@
 <div class="card">
-  <div class="card-header">
-    <h4 class="text-center">In Progress</h4>
+  <div class="card-header bg-success bg-gradient">
+    <h4 class="text-center text-light">In Progress</h4>
   </div>
   <div class="toast-container position-static">
     <div class="toast-container position-static">
+
       <app-task *ngFor="let item of listInprogress"
       [task]="item"
       (onClickLeftChange)="changeInProgressTodo($event)"
-      (onClickRightChange)="changeInProgresComplete($event)">
-
+      (onClickRightChange)="changeInProgresComplete($event)"
+      (onClickDeleteChange)="deleteTask($event)">
       </app-task>
+
     </div>
   </div>
 </div>

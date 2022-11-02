@@ -31,6 +31,23 @@ export class KanbanService {
     return [...this._completedList]
   }
 
+  addTaskInOptionList(option:string,ntask:TaskKanBan){
+    switch(option){
+      case 'To do':
+      this.addTaskInToDoList(ntask)
+      break;
+      case 'In progress':
+      this.addTaskInProgressList(ntask)
+      break;
+      case 'Completed':
+        console.log("complete add");
+
+      this.addTaskInCompletedList(ntask)
+      break;
+
+    }
+  }
+
   //ADD TASK TO TODO LIST
   addTaskInToDoList(ntask: TaskKanBan) {
     this._toDoList.push(ntask);
@@ -80,7 +97,7 @@ export class KanbanService {
   }
   //DELETE TASK IN COMPLETED LIST
   deleteTaskInCompletedList(nTask:TaskKanBan){
-    this._completedList=this._inProgresList.filter(task=>task.idTask!=nTask.idTask)
+    this._completedList=this._completedList.filter(task=>task.idTask!=nTask.idTask)
   }
 
 

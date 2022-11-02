@@ -7,6 +7,7 @@ import { CompletedComponent } from './completed/completed.component';
 import { ToDoComponent } from './to-do/to-do.component';
 import { FormsModule } from '@angular/forms';
 import { KanbanService } from './services/kanban.service';
+import { DeleteTaskComponent } from './delete-task/delete-task.component';
 
 
 
@@ -17,7 +18,8 @@ import { KanbanService } from './services/kanban.service';
     MainKanbanComponent,
     InProgressComponent,
     CompletedComponent,
-    ToDoComponent
+    ToDoComponent,
+    DeleteTaskComponent
   ],
   imports: [
     CommonModule,

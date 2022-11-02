@@ -8,7 +8,7 @@
         <form (ngSubmit)="addTaskKanBan()">
           <div class="m-2">
             <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="inTaskName" placeholder="Create API" name="taskName"
+              <input type="text" class="form-control" id="inTaskName" placeholder="create an API..." name="taskName"
                 [(ngModel)]="ntask.title"
                 required="true">
               <label for="inTaskName" class="text-muted">TaskName</label>
@@ -16,7 +16,7 @@
           </div>
           <div class="m-3">
             <div class="form-floating">
-              <textarea class="form-control" placeholder="Leave a comment here" id="floatinginTaskDescriptionTextarea2"
+              <textarea class="form-control" placeholder="My description..." id="inTaskDescription"
                 style="height: 70px" name="description" [(ngModel)]="ntask.description" required="true">
               </textarea>
               <label for="inTaskDescription" class="text-muted">Description</label>
@@ -42,7 +42,7 @@
           </div>
           <div class="m-3 text-center">
             <button type="submit" class="btn btn-primary">Add</button>
-          
+
           </div>
         </form>
       </div>
@@ -52,8 +52,8 @@
 </div>
 
 <div class="container mt-5 ">
-  <div class="border-secondary shadow-lg ">
-    <div class="row  m-2">
+  <div class="shadow-lg box-kanban-tasks">
+    <div class="row m-2">
       <div class="col-12 col-sm-12 col-md-4 col-lg-4">
         <!-- TODO LIST -->
         <app-to-do></app-to-do>

@@ -29,13 +29,13 @@ export class TaskComponent implements OnInit {
   getColorPriority(priority: string) {
     switch (priority) {
       case 'Low':
-        priority = 'bg-success';
+        priority = 'btn-primary';
         break;
       case 'Medium':
-        priority = 'bg-primary';
+        priority = 'btn-success';
         break;
       case 'Critical':
-        priority = 'bg-danger';
+        priority = 'btn-danger';
         break;
     }
     return priority;

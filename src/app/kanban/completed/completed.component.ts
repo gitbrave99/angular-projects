@@ -15,8 +15,12 @@ export class CompletedComponent implements OnInit {
     return this.kanbanService.ListComplete
   }
 
-  changeCompletedInProgress(nTask:TaskKanBan):void{
+  changeTaskFromCompletedToInProgress(nTask:TaskKanBan):void{
     this.kanbanService.changeTaskFromCompleteToInProgress(nTask);
+  }
+  
+  deleteTask(nTask:TaskKanBan){
+    this.kanbanService.deleteTaskInCompletedList(nTask)
   }
 
   ngOnInit(): void {
