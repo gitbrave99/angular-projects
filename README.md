@@ -1,9 +1,9 @@
 # AngularRojects
 
 ### Project list
-- task list CRUD
-- task list CRUD LocalStorage
-- movies API
+- Task list CRUD LocalStorage
+- Movie page - using themoviedb API
+- Kanban
 
 ## Development server
 
